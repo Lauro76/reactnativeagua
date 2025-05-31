@@ -9,12 +9,12 @@ export default function App() {
   function calcularAgua() {
     const pesoNum = parseFloat(peso);
     if (!nome || isNaN(pesoNum)) {
-      setResultado('Preencha todos os campos corretamente.');
+      setResultado('Preencha os campos corretamente.');
       return;
     }
 
     const consumo = pesoNum * 0.035;
-    setResultado(`${nome}, você deve beber ${consumo.toFixed(2)} litros de água por dia.`);
+    setResultado(`Ola seja bem vindo ${nome}, você deve consumir ${consumo.toFixed(2)} litros de água diariamente`);
   }
 
   return (
@@ -27,7 +27,7 @@ export default function App() {
           style={styles.input}
           value={nome}
           onChangeText={(valor) => setNome(valor)}
-          placeholder="Digite seu nome..."
+          placeholder=" Nome."
         />
       </View>
 
@@ -38,7 +38,7 @@ export default function App() {
           keyboardType="numeric"
           value={peso}
           onChangeText={(valor) => setPeso(valor)}
-          placeholder="Digite seu Peso Corporal..."
+          placeholder=" Peso."
         />
       </View>
 
@@ -58,14 +58,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffc0cb',
+    backgroundColor: 'Read',
   },
   titulo: {
     textAlign: 'center',
     fontSize: 24,
     marginTop: 60,
     fontWeight: 'bold',
-    color: '#c71585',
+    color: 'silver',
   },
   bloco: {
     width: '100%',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     width: '80%',
     fontSize: 18,
     marginLeft: '10%',
-    color: '#c71585',
+    color: 'black',
   },
   input: {
     width: '80%',
@@ -90,19 +90,20 @@ const styles = StyleSheet.create({
   btn: {
     width: '80%',
     marginLeft: '10%',
-    backgroundColor: '#f08080',
+    backgroundColor: '#blue',
     padding: 10,
     borderRadius: 10,
   },
   btnTxt: {
     fontSize: 20,
     textAlign: 'center',
+    color: 'white',
   },
   resultado: {
     marginTop: 20,
     textAlign: 'center',
     fontSize: 20,
-    color: 'db7093',
+    color: 'white',
     fontWeight: '600',
   },
 });
